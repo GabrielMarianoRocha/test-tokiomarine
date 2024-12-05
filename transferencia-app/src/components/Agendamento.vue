@@ -12,7 +12,7 @@
       </label>
       <label>
         Valor:
-        <input v-model="transferencia.valor" type="number" placeholder="Valor" required />
+        <input @input="validateValue" maxlength="10" v-model="transferencia.valor" type="number" placeholder="Valor" required />
       </label>
       <label>
         Data de Transferência:
@@ -60,6 +60,20 @@ export default {
         dataTransferencia: "",
       };
     },
+    validateValue() {
+      const maxValue = 9999999999;
+      const minValue = 1;
+
+      if (this.transferencia.valor > maxValue) {
+        this.errorMessage = `O valor não pode ser maior que ${maxValue}`;
+        this.transferencia.valor = maxValue;
+      } else if (this.transferencia.valor < minValue) {
+        this.errorMessage = `O valor não pode ser menor que ${minValue}`;
+        this.transferencia.valor = minValue;
+      } else {
+        this.errorMessage = '';
+      }
+    }
   },
 };
 </script>
