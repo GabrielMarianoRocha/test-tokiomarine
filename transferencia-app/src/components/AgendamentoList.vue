@@ -23,6 +23,7 @@
         </tr>
       </tbody>
     </table>
+    <button @click="window.location.reload()">Atualizar agenda</button>
   </div>
 </template>
 
@@ -49,7 +50,8 @@ export default {
 <style>
 .list-container {
   max-width: 800px;
-  margin: 20px auto;
+  margin: 50px auto;
+  margin-left: 20%;
   padding: 20px;
   border: 1px solid #ddd;
   border-radius: 8px;

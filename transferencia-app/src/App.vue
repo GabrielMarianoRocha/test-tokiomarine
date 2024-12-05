@@ -7,12 +7,12 @@
 
 <script>
   import Agendamento from "./components/Agendamento.vue";
-  import AgendamentosList from "./components/AgendamentoList.vue";
+  import AgendamentoList from "./components/AgendamentoList.vue";
 
 export default {
   components: {
     Agendamento,
-    AgendamentosList,
+    AgendamentoList,
   },
 };
 </script>
