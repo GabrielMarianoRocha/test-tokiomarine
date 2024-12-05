@@ -10,8 +10,8 @@ import java.time.LocalDate;
 public class Transferencia {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)  // Geração automática do ID
-    private Long id;  // Identificador único da transferência
+    @GeneratedValue(strategy = GenerationType.IDENTITY)  // Gera id
+    private Long id;
 
     private String contaOrigem;
     private String contaDestino;
@@ -20,7 +20,6 @@ public class Transferencia {
     private LocalDate dataAgendamento;
     private Double taxa;
 
-    // Getters e Setters
     public Long getId() {
         return id;
     }
@@ -61,5 +60,4 @@ public class Transferencia {
         return dataAgendamento;
     }
 
-    // Restante dos getters e setters
 }
